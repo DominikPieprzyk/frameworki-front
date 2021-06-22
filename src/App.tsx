@@ -6,15 +6,11 @@ import {
   Switch
 } from "react-router-dom";
 
-// import Entities from "./components/Entities/Entities";
 import Home from './components/Home/Home';
 import Menu from './components/Menu/Menu';
 import Navbar from './components/Navbar/Navbar';
-// import NotFound from "./components/NotFound/NotFound";
-// import Profile from "./components/Profile/Profile";
 import { Provider } from 'react-redux';
 import React from 'react';
-// import Workspace from "./components/Workspace/Workspace";
 import configureStore from './store';
 
 const store = configureStore();
@@ -40,6 +36,7 @@ const routes = [
   //   path: "/*",
   //   component: NotFound
   // }
+  // to be implemented
 ];
 
 

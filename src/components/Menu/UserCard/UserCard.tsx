@@ -15,7 +15,7 @@ import cx from 'classnames';
 import styles from "./UserCard.module.scss";
 import { usersFetchData } from './../../../actions/UserActions';
 
-const USER_ID = 1;
+const USER_ID = 5;
 
 interface StateProps {
     users: UsersState['users']
@@ -30,7 +30,7 @@ type P = RouteComponentProps & StateProps & DispatchProps;
 class UserCard extends Component<P> {
 
     componentDidMount() {
-        this.props.fetchData(1);
+        this.props.fetchData(USER_ID);
     }
 
     goTo(route: string) {

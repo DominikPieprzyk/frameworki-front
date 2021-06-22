@@ -21,7 +21,7 @@ import styles from "./Work.module.scss";
 import { worksFetchData } from '../../actions/WorksActions';
 
 const PAGE_SIZE = 10;
-const WORKS_LIMIT = 200;
+const WORKS_LIMIT = 250;
 
 interface StateProps {
     works: WorksState['works']

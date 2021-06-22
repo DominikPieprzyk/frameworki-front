@@ -24,7 +24,7 @@ type P = StateProps & DispatchProps;
 class Publications extends Component<P> {
     
     componentDidMount() {
-        this.props.fetchData(4);
+        this.props.fetchData(4); //  amount of publications
     }
 
     getFirstPostTile() {
@@ -34,7 +34,7 @@ class Publications extends Component<P> {
             <Img skeletonize className={styles.bgImage} src={post.photo?.url} alt={post.photo?.title} />
             <div className={styles.PublicationsTileContent}>
                 <h3 className={'header-3 firstLetterUpper'}>{post.title}</h3>
-                <UserSignature userId={post.userId} />
+                <UserSignature userId={5} />
             </div>
         </article >
             : <Skeleton type="articleTile" />
@@ -49,7 +49,7 @@ class Publications extends Component<P> {
                 <Img skeletonize className={styles.PublicationsArticleImage} src={post.photo?.url} alt={post.photo?.title} />
                 <div>
                     <h3 className={'header-3 firstLetterUpper'}>{post.title}</h3>
-                    <UserSignature onWhiteBg userId={post.userId} />
+                    <UserSignature onWhiteBg userId={5} />
                 </div>
             </article>) : <Skeleton type="article" count={3} />);
     }

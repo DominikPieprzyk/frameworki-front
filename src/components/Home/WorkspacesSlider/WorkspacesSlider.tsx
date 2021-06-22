@@ -1,5 +1,5 @@
 import { BiBookAlt, BiBuildings } from 'react-icons/bi';
-import { FcBusiness, FcFlowChart, FcSurvey } from "react-icons/fc";
+import { TiBriefcase, TiChartBarOutline, TiClipboard, TiInfoLarge } from "react-icons/ti";
 import React, { Component, RefObject } from 'react';
 import { formatDate, newMomentDate } from '../../../utils/dateUtils';
 
@@ -87,18 +87,19 @@ class WorkspacesSlider extends Component<{}, S> {
     getLogo(type: IWorkspace['type']) {
         let Icon;
         switch (type) {
-            case 'Contarct': Icon = FcSurvey; break;
-            case 'Corporate': Icon = FcBusiness; break;
-            case 'Norms': Icon = FcFlowChart; break;
-            default: Icon = FcSurvey; break;
+            case 'Contract': Icon = TiClipboard; break;
+            case 'Corporate': Icon = TiBriefcase; break;
+            case 'Norms': Icon = TiChartBarOutline; break;
+            default: Icon = TiInfoLarge; break;
         }
         return Icon && <Icon className={styles.tileLogo} />;
     }
 
+
     getIcon(type: IWorkspace['type']) {
         let Icon;
         switch (type) {
-            case 'Contarct': Icon = RiNewspaperLine; break;
+            case 'Contract': Icon = RiNewspaperLine; break;
             case 'Corporate': Icon = BiBuildings; break;
             case 'Norms': Icon = BiBookAlt; break;
             default: Icon = RiNewspaperLine; break;
