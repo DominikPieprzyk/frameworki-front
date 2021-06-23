@@ -11,6 +11,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import CloseIcon from '@material-ui/icons/Close';
 import AddIcon from '@material-ui/icons/Add';
 import SaveIcon from '@material-ui/icons/Save';
+
 const Profile = () => {
     const userId: number = 3;
     const [user, setUser] = useState<User>();
@@ -69,9 +70,18 @@ const Profile = () => {
         <div className="Profile">
             <div className="container">
                 <div className="info-row">
-                    <div className="elements"><ChatBubbleOutlineIcon /><span>Message</span></div>
-                    <div className="elements"><FormatAlignJustifyIcon /><span>Create a request</span></div>
-                    <div className="elements"><InsertDriveFileIcon /><span>Add a cluster</span></div>
+                    <div className="elements">
+                        <ChatBubbleOutlineIcon />
+                        <span>Message</span>
+                    </div>
+                    <div className="elements">
+                        <FormatAlignJustifyIcon />
+                        <span>Create a request</span>
+                    </div>
+                    <div className="elements">
+                        <InsertDriveFileIcon />
+                        <span>Add a cluster</span>
+                    </div>
                 </div>
                 <div className="user-wrapper">
                     <div className="left-column">
@@ -91,12 +101,28 @@ const Profile = () => {
                                 {userDataEditorEnabled ? <CloseIcon /> : <EditIcon />}
                             </button>
                         </div>
-                        <input type="text" disabled={!userDataEditorEnabled} value={user?.name} />
-                        <input type="text" disabled={!userDataEditorEnabled} value={user?.username} />
+                        <input 
+                         type="text" 
+                         disabled={!userDataEditorEnabled} 
+                         value={user?.name} 
+                        />
+                        <input 
+                         type="text" 
+                         disabled={!userDataEditorEnabled} 
+                         value={user?.username} 
+                        />
                         <div>
                             <div>
-                                <input type="text" disabled={!userDataEditorEnabled} value={user?.company.name} />
-                                <input type="text" disabled={!userDataEditorEnabled} value={user?.website} />
+                                <input 
+                                 type="text" 
+                                 disabled={!userDataEditorEnabled} 
+                                 value={user?.company.name} 
+                                />
+                                <input 
+                                 type="text" 
+                                 disabled={!userDataEditorEnabled} 
+                                 value={user?.website} 
+                                />
 
                             </div>
                             <div>
@@ -104,7 +130,11 @@ const Profile = () => {
                                     <option>Contractor</option>
                                     <option>Partner</option>
                                 </select>
-                                <input type="text" disabled={!userDataEditorEnabled} value={user?.phone} />
+                                <input 
+                                 type="text" 
+                                 disabled={!userDataEditorEnabled} 
+                                 value={user?.phone} 
+                                />
                             </div>
                         </div>
                     </div>
@@ -129,7 +159,13 @@ const Profile = () => {
                             {
                                 expertises.map((e, i) => {
                                     return (
-                                        <input type="text" value={e}  onChange={(e) => { handleChangeExpertise(i, e.currentTarget.value) }}      key={i} disabled={!userDetailsEnabled} />
+                                        <input 
+                                         type="text" 
+                                         value={e}  
+                                         onChange={(e) => { handleChangeExpertise(i, e.currentTarget.value) }}      
+                                         key={i} 
+                                         disabled={!userDetailsEnabled} 
+                                        />
                                     );
                                 })
                             }
@@ -142,7 +178,12 @@ const Profile = () => {
                             {
                                 specialities.map((e, i) => {
                                     return (
-                                        <input type="text" value={e} key={i} disabled={!userDetailsEnabled} />
+                                        <input 
+                                         type="text" 
+                                         value={e} 
+                                         key={i} 
+                                         disabled={!userDetailsEnabled} 
+                                        />
                                     );
                                 })
                             }
@@ -156,7 +197,13 @@ const Profile = () => {
                             {
                                 admissions.map((e, i) => {
                                     return (
-                                        <input type="text" value={e} readOnly key={i} disabled={!userDetailsEnabled} />
+                                        <input 
+                                         type="text" 
+                                         value={e} 
+                                         readOnly 
+                                         key={i} 
+                                         disabled={!userDetailsEnabled} 
+                                        />
                                     );
                                 })
 
