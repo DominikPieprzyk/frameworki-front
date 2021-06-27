@@ -1,6 +1,5 @@
 .Profile {
     width: 70vw;
-
     .container {
         background-color: white;
         border-radius: 6px;
@@ -120,3 +119,55 @@
         }
     }
 }
+
+.panelInformation-container{
+    padding-left:10px; 
+}
+
+.panelInformations {
+    font-weight: bold;
+    font-size: 16px;
+    label {
+      font-size: 13px;
+      color: darkgray;
+    }
+    .attachment {
+      background-color: darkgray;
+      font-weight: 200;
+      padding: 3px;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .infoTitle {
+    font-size: 22px;
+  }
+  .content {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .servicesAndProject {
+    label {
+      font-weight: 1000;
+    }
+    .correspondants {
+    }
+    .userRecord {
+      background-color: rgb(219, 245, 248);
+      margin-bottom: 2px;
+      padding: 5px 2px;
+      div {
+        span {
+          margin-left: 30px;
+          line-height: 30px;
+          img {
+            width: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+  }

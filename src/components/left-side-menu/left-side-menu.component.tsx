@@ -23,7 +23,7 @@ const LeftSideMenuComponent: FC<ILeftSideMenuProps> = ({ user, photo }) => {
         <div className="image-container">
           <Link to="/profile">
             <img src={photo.thumbnailUrl} alt="profile" />
-            </Link>
+          </Link>
         </div>
           <h2>{user.name}</h2>
         <div className="job-title">

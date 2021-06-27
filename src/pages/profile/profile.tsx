@@ -6,6 +6,8 @@ import { getPhotoById } from '../../api/photos';
 import { getUser } from '../../api/users';
 import Photo from '../../models/photo';
 import User from '../../models/user';
+import { AmountOfFees, InternalReviews, Proposals } from './profileTables/profileTables';
+import PersonIcon from "@material-ui/icons/Person";
 import './profile.scss';
 import EditIcon from '@material-ui/icons/Edit';
 import CloseIcon from '@material-ui/icons/Close';
@@ -192,7 +194,7 @@ const Profile = () => {
                     </div>
 
                     <div>
-                        <h2>Admissions</h2>
+                        <h2>Admissions to practice law</h2>
                         <div className="details-input-wrapper">
                             {
                                 admissions.map((e, i) => {
@@ -213,7 +215,7 @@ const Profile = () => {
                     </div>
 
                     <div>
-                        <h2>Counties</h2>
+                        <h2>Countries</h2>
                         <div className="details-input-wrapper">
                             {
                                 counties.map((e, i) => {
@@ -225,10 +227,67 @@ const Profile = () => {
                             {userDetailsEnabled ? <button onClick={() => setCounties(counties.concat(""))}><AddIcon /> </button> : ""}
                         </div>
                     </div>
-
-
+                    
                 </div>
-
+                <hr />
+                <div className="panelInformation-container">
+                    <div className="panelInformations">
+                        <h1 className="infoTitle">Panel Informations</h1>
+                        <label>Hourly fee</label>
+                        <div className="content">610$/hour (Negociated)</div>
+                        <label>Terms & conditions</label>
+                        <div className="content">
+                            Monthly 10k$ retainer - see with Jeanny Smith
+                        </div>
+                        <div className="attachment">Attachment_lorem_ipsum12345.jpg</div>
+                        </div>
+                        <div className="servicesAndProject">
+                        <h1 className="infoTitle">Services And Projects</h1>
+                        <div>Corporate M&A and international acquisitions</div>
+                        <div className="content">Internal correspondants</div>
+                        <div className="correspondants">
+                            <div className="userRecord">
+                            <div>
+                                <span>
+                                <img src={photo.thumbnailUrl} alt="thumbnail" />
+                                {user?.name}
+                                </span>
+                                <span>
+                                <ChatBubbleOutlineIcon style={{ verticalAlign: "middle" }} />
+                                Message
+                                </span>
+                                <span>
+                                <PersonIcon style={{ verticalAlign: "middle" }} />
+                                Profile
+                                </span>
+                            </div>
+                            </div>
+                            <div className="userRecord">
+                            <div>
+                                <span>
+                                <img src={photo.thumbnailUrl} alt="thumbnail" />
+                                {user?.name}
+                                </span>
+                                <span>
+                                <ChatBubbleOutlineIcon style={{ verticalAlign: "middle" }} />
+                                Message
+                                </span>
+                                <span>
+                                <PersonIcon style={{ verticalAlign: "middle" }} />
+                                Profile
+                                </span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <Proposals />
+                <hr />
+                <InternalReviews />
+                <hr />
+                <AmountOfFees />
+                <hr />
             </div>
 
         </div>

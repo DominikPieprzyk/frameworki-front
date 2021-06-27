@@ -38,6 +38,7 @@ const Workspace = () => {
         const work = workspaces.find(q => q.id.toString() === id)
         setWorkspace(work);
     }, [id]);
+
     return (
         <div className="workspace">
             <div className="header">

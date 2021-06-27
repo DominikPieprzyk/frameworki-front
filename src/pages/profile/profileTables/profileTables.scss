@@ -1,0 +1,35 @@
+.title{
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #7e7e7e;
+}
+
+.seeMore{
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #4e41ff;
+}
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    th{
+        width: 100px;
+        padding: 10px;
+        font-weight: 800;
+        border-bottom: 1px solid black;
+    }
+    td{
+        width: 150px;
+        padding: 5px;
+        text-align: center;
+    }
+}
